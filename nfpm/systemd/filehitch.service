@@ -1,0 +1,13 @@
+[Unit]
+Description=Filehitch
+Documentation=https://github.com/surfshark/filehitch#configuration
+After=network.target network-online.target
+Requires=network-online.target
+
+[Service]
+Restart=always
+Type=simple
+ExecStart=/usr/bin/filehitch -config /etc/filehitch/config.yaml
+
+[Install]
+WantedBy=multi-user.target
