@@ -68,7 +68,7 @@ type S3Resource struct {
 }
 
 type Expect struct {
-	Code int    `yaml:"code"`
+	Code int    `yaml:"code" default:"200"`
 	Body string `yaml:"body"`
 }
 
