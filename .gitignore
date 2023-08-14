@@ -1,4 +1,5 @@
-/filehitch
-/config.yaml
 /.vscode/
+/config.yaml
+/dist/
+/filehitch
 __debug_bin*
