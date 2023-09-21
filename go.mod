@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/creasty/defaults v1.7.0
-	github.com/go-co-op/gocron v1.33.1
+	github.com/go-co-op/gocron v1.34.2
 	github.com/minio/minio-go/v7 v7.0.63
 	github.com/minio/sio v0.3.1
 	github.com/rs/zerolog v1.30.0
