@@ -7,7 +7,7 @@ require (
 	github.com/go-co-op/gocron v1.33.1
 	github.com/minio/minio-go/v7 v7.0.63
 	github.com/minio/sio v0.3.1
-	github.com/rs/zerolog v1.30.0
+	github.com/rs/zerolog v1.31.0
 	golang.org/x/crypto v0.13.0
 	gopkg.in/yaml.v3 v3.0.1
 )
