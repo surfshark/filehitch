@@ -1,7 +1,11 @@
+name: Scan
+on:
+  workflow_dispatch
+
 jobs:
-  chain_bench_scan_example:
+  chain_bench_scan:
     runs-on: ubuntu-latest
-    name: Test Job
+    name: Chain Bench Scan
     steps:
       - name: Chain Bench
         id: chain-bench
