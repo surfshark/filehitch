@@ -18,14 +18,9 @@ jobs:
       - name: Save to file 
         run: echo ${{ steps.chain-bench.outputs.chain-bench-result }} > /tmp/report.json
 
-      - name: Convert JSON to HTML Table
-        uses: Teebra/JSON-to-HTML-table@v2.0.0
-        with:
-          json-file: /tmp/report.json
-
       - name: Upload HTML Table to Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: output_html 
-          path: output.html
+          name: report.json
+          path: /tmp/report.json
   
