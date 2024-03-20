@@ -12,7 +12,7 @@ jobs:
         uses: aquasecurity/chain-bench-action@v1.1.1
         with:
           repository-url: ${{ github.server_url }}/${{ github.repository }} # Compiles to https://github.com/aquasecurity/chain-bench-action
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.CB_TOKEN }}
           scm-platform: github #Optional parameter for dedicated SCM servers
 
       # Using the github action output from the scan step "chain-bench-result" (JSON so you can run rego/jq against it)
