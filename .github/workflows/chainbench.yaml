@@ -18,4 +18,4 @@ jobs:
 
       # Using the github action output from the scan step "chain-bench-result" (JSON so you can run rego/jq against it)
       - name: Echo
-        run: echo ${{ fromJson(steps.chain-bench.outputs.chain-bench-result) }} | toJSON
+        run: echo "${{ toJson(fromJson(steps.chain-bench.outputs.chain-bench-result)) }}"
