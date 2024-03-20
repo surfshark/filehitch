@@ -17,4 +17,4 @@ jobs:
 
       # Using the github action output from the scan step "chain-bench-result" (JSON so you can run rego/jq against it)
       - name: Echo
-        run: echo ${{ steps.chain-bench.outputs.chain-bench-result }}
+        run: echo ${{ steps.chain-bench.outputs.chain-bench-result }} | jq
