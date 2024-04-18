@@ -15,6 +15,12 @@ jobs:
           github-token: ${{ secrets.CB_TOKEN }}
           scm-platform: github #Optional parameter for dedicated SCM servers
 
-      # Using the github action output from the scan step "chain-bench-result" (JSON so you can run rego/jq against it)
-      - name: Echo
-        run: echo ${{ steps.chain-bench.outputs.chain-bench-result }} | jq
+      - name: Save to file 
+        run: echo ${{ steps.chain-bench.outputs.chain-bench-result }} > /tmp/report.json
+
+      - name: Upload HTML Table to Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: report.json
+          path: /tmp/report.json
+  
